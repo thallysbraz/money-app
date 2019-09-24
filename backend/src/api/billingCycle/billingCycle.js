@@ -1,7 +1,6 @@
 const restful = require("node-restful");
 const mongoose = restful.mongoose;
 
-//Schema relativo ao credito
 const creditSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -13,7 +12,7 @@ const creditSchema = new mongoose.Schema({
     required: true
   }
 });
-//Schema relativo ao debito
+
 const debtSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -31,7 +30,7 @@ const debtSchema = new mongoose.Schema({
     enum: ["PAGO", "PENDENTE", "AGENDADO"]
   }
 });
-//Schema relativo ao ciclo de pagamento
+
 const billingCycleSchema = new mongoose.Schema({
   name: {
     type: String,
